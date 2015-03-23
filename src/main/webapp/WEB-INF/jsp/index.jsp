@@ -13,18 +13,29 @@
 <link href="${resourceUrl}/css/styles.css" rel="stylesheet">
 <script src="${resourceUrl}/js/angular.js"></script>
 <script src="${resourceUrl}/js/angular-route.js"></script>
-<script src="${resourceUrl}/js/app.js"></script>
+<script src="${resourceUrl}/controllers/app.js"></script>
 <script src="${resourceUrl}/controllers/studentController.js"></script>
 
 
 </head>
 <body>
-<br>
+	<div class="sapn12 content">
+		<div class="span12 nav-bar">
+			<ul class="nav nav-pills">
+				<li class="active"><a href="#">Home</a></li>
+				<li><a href="#">Students</a></li>
+				<li><a href="#">Academic</a></li>
+				<li><a href="#">More Stuff</a></li>
+			</ul>
+		</div>
+		<br>
+		<div class="container greyBackground span12">
+			<div ng-view></div>
+		</div>
 
-	<div class="container greyBackground" >
-	${resourceUrl}
-		<h4> Student Details</h4>
-		<div ng-view></div>
+		<div class="footer span12">
+			<p class="footer-text">Example courtesy by Chaminda</p>
+		</div>
 	</div>
 </body>
 </html>

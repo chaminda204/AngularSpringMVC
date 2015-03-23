@@ -3,6 +3,7 @@
 <div class="row-fluid">
 
 	<div class="span12">
+		<h4> Student Details</h4>
 		<div class="span12">
 			Search: <input class="search-query" ng-model="query">
 		</div>
@@ -23,7 +24,7 @@
 			<tbody>
 				<tr
 					ng-repeat="student in students |filter:query | orderBy:predicate:reverse">
-					<td>{{student.studentId}}</a></td>
+					<td>{{student.id}}</a></td>
 					<td>{{student.firstName}}</a></td>
 					<td>{{student.lastName}}</td>
 					<td>{{student.email}}</td>

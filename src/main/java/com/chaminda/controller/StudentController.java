@@ -31,13 +31,15 @@ public class StudentController {
 	public @ResponseBody List<Student> getAllStudents() {
 		List<Student> students = new ArrayList<Student>();
 		Student student = new Student();
+		student.setId(1);
 		student.setFirstName("Chaminda");
 		student.setLastName("Ariyaratna");
 		student.setEmail("chaminda204@yahoo.com");
-		student.setId(1);
+		student.setId(2);
 		students.add(student);
 		
 		Student ari = new Student();
+		ari.setId(1);
 		ari.setFirstName("Ranga");
 		ari.setLastName("Ariyaratna");
 		ari.setEmail("rangs@yahoo.com");
@@ -45,6 +47,7 @@ public class StudentController {
 		students.add(ari);
 		
 		Student viji = new Student();
+		viji.setId(3);
 		viji.setFirstName("Viji");
 		viji.setLastName("Epa");
 		viji.setEmail("epa@yahoo.com");
@@ -64,7 +67,7 @@ public class StudentController {
 		return student;
 	}
 	  @RequestMapping(value = "/rest/createStudent", method = RequestMethod.POST)
-	    public @ResponseBody Student createEmployee(@RequestBody Student student) {
+	    public @ResponseBody Student createStudent(@RequestBody Student student) {
 		  Student savedStudent = studentService.saveStudent(student);
 		  
 	        return savedStudent;

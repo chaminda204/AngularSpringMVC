@@ -5,15 +5,15 @@ studentApp.config(['$routeProvider',
     function($routeProvider) {	
         $routeProvider.
             when('/students', {
-                templateUrl: 'WEB-INF/public/jsp/students.jsp',
+                templateUrl: 'web-pages/students.jsp',
                 controller: 'StudentCtrl'
             }).
             when('/student/:studentId', {
-                templateUrl: 'WEB-INF/public/jsp/editStudent.jsp',
+                templateUrl: 'web-pages/editStudent.jsp',
                 controller: 'StudentCtrlUpd'
             }).
             when('/newStudent', {
-                templateUrl: 'WEB-INF/public/jsp/editStudent.jsp',
+                templateUrl: 'web-pages/editStudent.jsp',
                 controller: 'StudentCtrlNew'
             }).
             otherwise({
