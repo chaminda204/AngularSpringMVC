@@ -28,7 +28,7 @@
 					<td>{{student.firstName}}</a></td>
 					<td>{{student.lastName}}</td>
 					<td>{{student.email}}</td>
-					<td><a href="#/student/{{student.studentId}}"><i class="icon-pencil"></i></a></td>
+					<td><a href="#/student/{{student.id}}"><i class="icon-pencil"></i></a></td>
 				</tr>
 			</tbody>
 		</table>

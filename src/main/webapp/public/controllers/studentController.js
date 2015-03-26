@@ -2,27 +2,24 @@
 
 /* Controllers */
 
-var studentController = angular.module('studentController', []);
+var studetModule = angular.module('studentModule', []);
 
-studentController.controller('StudentCtrl', [
+studetModule.controller('StudentCtrl', [
 		'$scope',
 		'$http',
 		function($scope, $http) {
-			$http.get(
-					'http://localhost:8080/StudentService/rest/getAllStudents')
+			$http.get('rest/getAllStudents')
 					.success(function(data) {
 						$scope.students = data;
 					});
 		} ]);
 
-studentController.controller('StudentCtrlUpd', [
+studetModule.controller('StudentCtrlUpd', [
 		'$scope',
 		'$routeParams',
 		'$http',
 		function($scope, $routeParams, $http) {
-			$http.get(
-					'http://localhost:8080/StudentService/rest/student/'
-							+ $routeParams.studentId).success(function(data) {
+			$http.get('rest/student/'+ $routeParams.studentId).success(function(data) {
 				$scope.student = data;
 			});
 		} ]);
